@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portfólio",
-  description: "Meu portfólio pessoal",
+  title: "AXCompany — Tráfego Pago, Branding & Copywriting",
+  description: "Soluções de tráfego pago, branding estratégico e copywriting desenhados para acelerar o seu crescimento.",
 };
 
 export default function RootLayout({

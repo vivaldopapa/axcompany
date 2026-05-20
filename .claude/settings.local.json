@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npx create-next-app@latest portfolio --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
-      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\Vivaldo\\\\Documents\\\\work\\\\axcompany\\\\portfolio\\\\src\\\\components\")"
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\Vivaldo\\\\Documents\\\\work\\\\axcompany\\\\portfolio\\\\src\\\\components\")",
+      "PowerShell(New-Item -ItemType Directory -Path \"c:\\\\Users\\\\Vivaldo\\\\Documents\\\\work\\\\axcompany\\\\public\" -Force)",
+      "PowerShell(Copy-Item \"c:\\\\Users\\\\Vivaldo\\\\Documents\\\\work\\\\axcompany\\\\logo.png\" -Destination \"c:\\\\Users\\\\Vivaldo\\\\Documents\\\\work\\\\axcompany\\\\public\\\\logo.png\" -Force)"
     ]
   }
 }
