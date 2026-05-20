@@ -124,7 +124,7 @@ const pillars = [
           </svg>
         ),
         title: "Mentoria Ultra AX",
-        desc: "O treinamento definitivo focado no dono do negócio, estruturando processos, controle de CMV, gestão de equipes e maestria nas plataformas de venda.",
+        desc: "O treinamento definitivo focado no gestão lucrativa das redes sociais, ifood, configurações estratégicas do google business, anúncios pagos, gestão de equipe e delivery.",
       },
     ],
   },
