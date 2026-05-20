@@ -72,7 +72,7 @@ const pillars = [
           </svg>
         ),
         title: "Aprimoramento de Cardápio Digital",
-        desc: "Engenharia de cardápio aplicada ao delivery e iFood para aumentar o ticket médio e destacar os produtos mais lucrativos.",
+        desc: "Reformulação completa do cardápio para delivery e iFood — visual mais moderno, produtos estratégicos  e textos otimizados para mais conversões.",
       },
       {
         icon: (
@@ -82,7 +82,7 @@ const pillars = [
           </svg>
         ),
         title: "Copywriting",
-        desc: "Escrita persuasiva para anúncios, roteiros e páginas, conectando o desejo do cliente à oferta do seu restaurante.",
+        desc: "Escrita persuasiva para anúncios, roteiros e páginas, conectando o desejo do cliente à oferta do seu restaurante, hamburgueria ou pizzaria.",
       },
     ],
   },
@@ -233,7 +233,7 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full opacity-15 blur-3xl pointer-events-none"
           style={{ background: "radial-gradient(circle, #2563EB, transparent)" }} />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-32 md:pt-24">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium mb-8"
             style={{ background: "rgba(124,58,237,0.15)", border: "1px solid rgba(124,58,237,0.3)", color: "#A855F7" }}>
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse inline-block" />
