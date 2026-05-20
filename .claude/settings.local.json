@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest portfolio --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\Vivaldo\\\\Documents\\\\work\\\\axcompany\\\\portfolio\\\\src\\\\components\")"
+    ]
+  }
+}
