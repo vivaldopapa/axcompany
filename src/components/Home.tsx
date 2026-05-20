@@ -9,46 +9,132 @@ const WHATSAPP_MESSAGE = encodeURIComponent(
 );
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
-const services = [
+const pillars = [
   {
-    icon: (
-      <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
-        <path d="M3 3h18v4H3V3zm0 7h12v4H3v-4zm0 7h8v4H3v-4z" stroke="#A855F7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M19 14l3 3-3 3" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M22 17h-5" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
-    title: "Tráfego Pago",
-    desc: "Campanhas estratégicas no Google, Meta e YouTube que convertem cliques em clientes reais. ROI mensurável desde o primeiro dia.",
+    number: "01",
+    title: "Tração & Escala",
+    accent: "#A855F7",
+    accentBg: "rgba(168,85,247,0.12)",
+    accentBorder: "rgba(168,85,247,0.3)",
+    services: [
+      {
+        icon: (
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+            <circle cx="12" cy="11" r="4" stroke="#A855F7" strokeWidth="1.5"/>
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#A855F7" strokeWidth="1.5"/>
+            <path d="M9 9h1.5M13.5 9H15M12 7.5v1.5M12 10.5V12" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+        ),
+        title: "Gestão de Google Business / Google Ads",
+        desc: "Posicionamento estratégico e anúncios para o seu restaurante aparecer no topo do mapa e das buscas exatamente quando o cliente estiver com fome.",
+      },
+      {
+        icon: (
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="#A855F7" strokeWidth="1.5"/>
+            <circle cx="12" cy="12" r="4" stroke="#38BDF8" strokeWidth="1.5"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="#A855F7"/>
+            <path d="M8 12h8" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+        ),
+        title: "Tráfego Meta",
+        desc: "Campanhas altamente segmentadas no Instagram e Facebook para atrair novos clientes diariamente e reter quem já comprou.",
+      },
+    ],
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="9" stroke="#A855F7" strokeWidth="1.5"/>
-        <path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="12" cy="12" r="3" stroke="#A855F7" strokeWidth="1.5"/>
-      </svg>
-    ),
-    title: "Branding Estratégico",
-    desc: "Identidade visual e posicionamento de marca que geram autoridade, reconhecimento e conexão genuína com o seu público.",
+    number: "02",
+    title: "Estrutura & Conversão",
+    accent: "#38BDF8",
+    accentBg: "rgba(56,189,248,0.12)",
+    accentBorder: "rgba(56,189,248,0.3)",
+    services: [
+      {
+        icon: (
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+            <rect x="2" y="3" width="20" height="16" rx="2" stroke="#38BDF8" strokeWidth="1.5"/>
+            <path d="M2 7h20" stroke="#A855F7" strokeWidth="1.5"/>
+            <circle cx="5" cy="5" r="0.8" fill="#A855F7"/>
+            <circle cx="8" cy="5" r="0.8" fill="#38BDF8"/>
+            <path d="M7 12h10M7 15h6" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
+            <path d="M2 19l4 2" stroke="#A855F7" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+        ),
+        title: "Desenvolvimento de Site",
+        desc: "Criação de páginas rápidas, modernas e focadas em conversão, prontas para receber os clientes dos anúncios.",
+      },
+      {
+        icon: (
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+            <rect x="4" y="2" width="16" height="20" rx="2" stroke="#38BDF8" strokeWidth="1.5"/>
+            <path d="M8 7h8M8 11h8M8 15h5" stroke="#A855F7" strokeWidth="1.5" strokeLinecap="round"/>
+            <path d="M16 16l2 2 3-3" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        ),
+        title: "Aprimoramento de Cardápio Digital",
+        desc: "Engenharia de cardápio aplicada ao delivery e iFood para aumentar o ticket médio e destacar os produtos mais lucrativos.",
+      },
+      {
+        icon: (
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+            <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M15 5l3 3" stroke="#A855F7" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+        ),
+        title: "Copywriting",
+        desc: "Escrita persuasiva para anúncios, roteiros e páginas, conectando o desejo do cliente à oferta do seu restaurante.",
+      },
+    ],
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
-        <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="#A855F7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M15 5l3 3" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
-    title: "Copywriting",
-    desc: "Textos que vendem. Da headline ao CTA, cada palavra é estrategicamente posicionada para guiar o leitor até a conversão.",
+    number: "03",
+    title: "Inteligência & Direcionamento",
+    accent: "#22C55E",
+    accentBg: "rgba(34,197,94,0.12)",
+    accentBorder: "rgba(34,197,94,0.3)",
+    services: [
+      {
+        icon: (
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2" stroke="#22C55E" strokeWidth="1.5"/>
+            <circle cx="5" cy="19" r="2" stroke="#22C55E" strokeWidth="1.5"/>
+            <circle cx="19" cy="19" r="2" stroke="#22C55E" strokeWidth="1.5"/>
+            <path d="M12 7v4M12 11l-5.5 6M12 11l5.5 6" stroke="#A855F7" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+        ),
+        title: "Gestão de Redes Sociais",
+        desc: "Criação de conteúdo estratégico e posicionamento visual para gerar desejo constante pelos seus pratos e construir autoridade de marca.",
+      },
+      {
+        icon: (
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+            <path d="M3 20h18M5 20V14M9 20V10M13 20V6M17 20V3" stroke="#22C55E" strokeWidth="1.5" strokeLinecap="round"/>
+            <circle cx="17" cy="3" r="1.5" fill="#A855F7"/>
+            <path d="M5 14l4-4 4 2 4-5" stroke="#A855F7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        ),
+        title: "Planejamento & Análises",
+        desc: "Análise profunda de métricas de mercado, CRM de clientes e alinhamento de campanhas promocionais focadas na saúde financeira do negócio.",
+      },
+      {
+        icon: (
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+            <path d="M12 2l2.09 6.26L20 9.27l-4.91 4.02L16.18 20 12 16.77 7.82 20l1.09-6.71L4 9.27l5.91-1.01L12 2z" stroke="#22C55E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M12 7v5l3 2" stroke="#A855F7" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+        ),
+        title: "Mentoria Ultra AX",
+        desc: "O treinamento definitivo focado no dono do negócio, estruturando processos, controle de CMV, gestão de equipes e maestria nas plataformas de venda.",
+      },
+    ],
   },
 ];
 
 const results = [
   { value: "3x", label: "Retorno médio sobre investimento" },
-  { value: "120+", label: "Clientes atendidos" },
+  { value: "520+", label: "Clientes atendidos" },
   { value: "98%", label: "Taxa de satisfação" },
-  { value: "5M+", label: "Em receita gerada" },
+  { value: "3M+", label: "Em receita gerada" },
 ];
 
 const steps = [
@@ -210,19 +296,27 @@ export default function Home() {
               Cada solução é desenvolvida com estratégia, dados e criatividade para maximizar o retorno sobre o seu investimento.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((s) => (
-              <div key={s.title} className="glass-card p-8 group cursor-default transition-all duration-300">
-                <div className="mb-6 p-3 inline-block rounded-xl" style={{ background: "rgba(124,58,237,0.1)" }}>
-                  {s.icon}
+          <div className="flex flex-col gap-16">
+            {pillars.map((pillar) => (
+              <div key={pillar.number}>
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="text-5xl font-black" style={{ color: `${pillar.accent}22` }}>{pillar.number}</span>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: pillar.accent }}>Pilar {pillar.number}</p>
+                    <h3 className="text-2xl font-bold text-white">{pillar.title}</h3>
+                  </div>
+                  <div className="flex-1 h-px ml-4" style={{ background: `linear-gradient(90deg, ${pillar.accentBorder}, transparent)` }} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{s.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{s.desc}</p>
-                <div className="mt-6 flex items-center gap-2 text-sm font-medium" style={{ color: "#A855F7" }}>
-                  Saiba mais
-                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <div className={`grid gap-6 ${pillar.services.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"}`}>
+                  {pillar.services.map((s) => (
+                    <div key={s.title} className="glass-card p-8 group cursor-default transition-all duration-300">
+                      <div className="mb-6 p-3 inline-block rounded-xl" style={{ background: pillar.accentBg, border: `1px solid ${pillar.accentBorder}` }}>
+                        {s.icon}
+                      </div>
+                      <h4 className="text-lg font-bold text-white mb-3">{s.title}</h4>
+                      <p className="text-gray-400 leading-relaxed text-sm">{s.desc}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
